@@ -8,10 +8,10 @@ namespace _01_AplicacionTest
     {
         _03_InfraestructuraDatos.SQLServer.TipoProductoRepositorio r = new _03_InfraestructuraDatos.SQLServer.TipoProductoRepositorio();
         [TestMethod]
-        public void Prueba_DatosNoValidos()
+        public void Prueba_DatosValidos()
         {
             //ANT 
-            int i =0;
+            int i =1;
             
             _01_Aplicacion.TipoProductoServicio tps = new _01_Aplicacion.TipoProductoServicio(r);
             //_02_Dominio.Entidades.TipoProducto tp = new _02_Dominio.Entidades.TipoProducto();
