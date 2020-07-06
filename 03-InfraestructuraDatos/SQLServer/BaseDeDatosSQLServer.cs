@@ -11,8 +11,8 @@ namespace _03_InfraestructuraDatos.SQLServer
     {
 
         private static BaseDeDatosSQLServer _instancia = null;
-        private string stringConexion = @"Data Source=DAVICITO-PC\SQLEXPRESS;Initial Catalog=master;Integrated Security=True";
-
+        //private string stringConexion = @"Data Source=DAVICITO-PC\SQLEXPRESS;Initial Catalog=master;Integrated Security=True";
+        private string stringConexion = System.Configuration.ConfigurationManager.ConnectionStrings["SQLCON"].ConnectionString;
         private SqlConnection conexion = null;
 
         private BaseDeDatosSQLServer()

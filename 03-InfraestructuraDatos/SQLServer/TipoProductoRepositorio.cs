@@ -17,9 +17,9 @@ namespace _03_InfraestructuraDatos.SQLServer
 
 
             SqlDataReader rd = null;
-            string nombre = "Celulares";
+            string nombre = "";
 
-            string SQL_STATEMENT = "UPDATE tipo_producto SET nombre = @nombre WHERE id=1004";
+            string SQL_STATEMENT = "UPDATE tipo_producto SET nombre = @nombre";
 
             TipoProducto resultado = new TipoProducto();
             SqlConnection conexion = BaseDeDatosSQLServer.getIntancia().getConexion();
@@ -76,7 +76,7 @@ namespace _03_InfraestructuraDatos.SQLServer
 
 
             SqlDataReader reader = null;
-            string nombre = "Musica";
+            string nombre = "";
 
             string SQL_STATEMENT = "INSERT INTO tipo_producto values(@nombre)";
 

@@ -21,10 +21,12 @@ namespace LaboratorioDeSoftware
 
             //_01_Aplicacion.TipoProductoServicio tipoP = new _01_Aplicacion.TipoProductoServicio();
             //_02_Dominio.Entidades.TipoProducto tipo_P = tipoP.Eliminar(1003);
-
-            _01_Aplicacion.TipoProductoServicio Actualizar = new _01_Aplicacion.TipoProductoServicio();
+            _03_InfraestructuraDatos.SQLServer.TipoProductoRepositorio repo = new _03_InfraestructuraDatos.SQLServer.TipoProductoRepositorio();
+            _01_Aplicacion.TipoProductoServicio Actualizar = new _01_Aplicacion.TipoProductoServicio(repo);
             _02_Dominio.Entidades.TipoProducto categoriaNueva = new _02_Dominio.Entidades.TipoProducto();
-            _02_Dominio.Entidades.TipoProducto tipoProductoA = Actualizar.Actualizar(categoriaNueva); 
+            categoriaNueva.Nombre = "Pepe";
+            _02_Dominio.Entidades.TipoProducto tipoProductoA = Actualizar.Guardar(categoriaNueva); 
+
         }
     }
 }
