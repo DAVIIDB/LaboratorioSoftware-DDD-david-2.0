@@ -17,7 +17,7 @@ namespace _03_InfraestructuraDatos.SQLServer
 
 
             SqlDataReader rd = null;
-            string nombre = "";
+            
 
             string SQL_STATEMENT = "UPDATE tipo_producto SET nombre = @nombre";
 
@@ -32,7 +32,7 @@ namespace _03_InfraestructuraDatos.SQLServer
             //param2.Value = "Musica";
 
 
-            cmd.Parameters.Add(new SqlParameter("@nombre", nombre));
+            cmd.Parameters.Add(new SqlParameter("@nombre", entidad.Nombre));
             rd = cmd.ExecuteReader();
 
             while (rd.Read())
@@ -76,7 +76,7 @@ namespace _03_InfraestructuraDatos.SQLServer
 
 
             SqlDataReader reader = null;
-            string nombre = "";
+            
 
             string SQL_STATEMENT = "INSERT INTO tipo_producto values(@nombre)";
 
@@ -91,7 +91,7 @@ namespace _03_InfraestructuraDatos.SQLServer
             //param2.Value = "Musica";
            
             
-            cmd.Parameters.Add(new SqlParameter("@nombre", nombre));
+            cmd.Parameters.Add(new SqlParameter("@nombre", Entidad.Nombre));
             reader = cmd.ExecuteReader();
             
                 while (reader.Read())

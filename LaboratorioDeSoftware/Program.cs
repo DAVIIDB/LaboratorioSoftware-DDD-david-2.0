@@ -25,8 +25,9 @@ namespace LaboratorioDeSoftware
             _01_Aplicacion.TipoProductoServicio Actualizar = new _01_Aplicacion.TipoProductoServicio(repo);
             _02_Dominio.Entidades.TipoProducto categoriaNueva = new _02_Dominio.Entidades.TipoProducto();
             categoriaNueva.Nombre = "Pepe";
-            _02_Dominio.Entidades.TipoProducto tipoProductoA = Actualizar.Guardar(categoriaNueva); 
-
+            categoriaNueva.Id = 5;
+            _02_Dominio.Entidades.TipoProducto tipoProductoA = Actualizar.Guardar(categoriaNueva);
+            //_02_Dominio.Entidades.TipoProducto tp = Actualizar.Actualizar(categoriaNueva);
         }
     }
 }
