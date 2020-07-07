@@ -11,13 +11,41 @@ namespace _01_AplicacionTest
         public void Prueba_DatosValidos()
         {
             //ANT 
-            int i =1;
-            
+            string n ="ss";
+            //ACT
             _01_Aplicacion.TipoProductoServicio tps = new _01_Aplicacion.TipoProductoServicio(r);
-            //_02_Dominio.Entidades.TipoProducto tp = new _02_Dominio.Entidades.TipoProducto();
-            _02_Dominio.Entidades.TipoProducto eliminar = tps.Eliminar(i);
-            //ACT y ASERT
-            Assert.AreEqual(eliminar.Id, i);
+            _02_Dominio.Entidades.TipoProducto tp = new _02_Dominio.Entidades.TipoProducto();
+
+            _02_Dominio.Entidades.TipoProducto _tp = new _02_Dominio.Entidades.TipoProducto();
+
+            _01_Aplicacion.TipoProductoServicio _tps = new _01_Aplicacion.TipoProductoServicio(r);
+            tp.Nombre = n;
+            _tp.Nombre = n;
+           // tps.Guardar(_tp);
+           
+           // _tps.Guardar(tp);
+
+            //ASERT
+            Assert.AreEqual(tp.Nombre,n);
+
+        }
+        [TestMethod]
+        public void Prueba_DatosInvalidos()
+        {
+            //ANT 
+            string n=null;
+            //ACT
+            _01_Aplicacion.TipoProductoServicio tps = new _01_Aplicacion.TipoProductoServicio(r);
+            _02_Dominio.Entidades.TipoProducto tp = new _02_Dominio.Entidades.TipoProducto();
+
+            tp.Nombre = n;
+            
+            // tps.Guardar(_tp);
+
+           
+
+            //ASERT
+            Assert.IsNull(tp.Nombre);
 
         }
     }
