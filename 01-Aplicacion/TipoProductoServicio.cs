@@ -7,12 +7,14 @@ using _02_Dominio.Entidades;
 
 namespace _01_Aplicacion
 {
+
     public class TipoProductoServicio
     {
         _03_InfraestructuraDatos.SQLServer.TipoProductoRepositorio rp = new _03_InfraestructuraDatos.SQLServer.TipoProductoRepositorio();
-        public TipoProductoServicio(_03_InfraestructuraDatos.SQLServer.TipoProductoRepositorio rp) {
 
-            rp = this.rp;
+        public TipoProductoServicio(_03_InfraestructuraDatos.SQLServer.TipoProductoRepositorio r) {
+
+            rp =r;
 
         }
         public _02_Dominio.Entidades.TipoProducto Actualizar(_02_Dominio.Entidades.TipoProducto e)
